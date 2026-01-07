@@ -1,0 +1,4 @@
+# Ignore documentation folder
+documentation/ export-ignore
+# Ignore all markdown from exporting
+*.md export-ignore
