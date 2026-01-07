@@ -1,2 +1,2 @@
 # chargily-pro-laravel
-PHP Package of Chargily Pro™, a Laravel SDK that enables seamless integration of Chargily Pro digital services APIs, including mobile credit recharge (flexy/airtime) and digital product distribution, using a secure and scalable architecture.
+Laravel Package of Chargily Pro™, a Laravel SDK that enables seamless integration of Chargily Pro digital services APIs, including mobile credit recharge (flexy/airtime) and digital product distribution, using a secure and scalable architecture.
