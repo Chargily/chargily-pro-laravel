@@ -1,0 +1,42 @@
+{
+    "name": "chargily/chargily-pro-laravel",
+    "type": "library",
+    "description": "Laravel package for Chargily pro",
+    "keywords": [
+        "Chargily-Pro",
+        "pro.charrgily.com",
+        "digital product distribution",
+        "mobile recharge",
+        "flexi",
+        "Gift cards API"
+    ],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "ChargilyDev",
+            "role": "Developer"
+        },
+        {
+            "name": "Boubazine mohammed",
+            "email": "mohamedtorino161@gmail.com",
+            "role": "Developer"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Chargily\\ChargilyProLaravel\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Chargily\\ChargilyProLaravel\\ChargilyProServiceProvider"
+            ]
+        }
+    },
+    "require": {
+        "php": "^8.2",
+        "illuminate/support": "^12.0",
+        "chargily/chargily-pro": "^1.0"
+    }
+}
