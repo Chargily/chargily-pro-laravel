@@ -33,19 +33,19 @@ CHARGILY_PRO_SECRET_KEY="your-secret-key"
 
 * Modes List
 ```php
-    ChargilyProTopUp::modes()
+    \Chargily\ChargilyProLaravel\Facades\ChargilyProTopUp::modes()
 ```
 * Retrieve Mode
 ```php
-    ChargilyProTopUp::getMode("5");
+    \Chargily\ChargilyProLaravel\Facades\ChargilyProTopUp::getMode("5");
 ```
 * Operators List
 ```php
-    ChargilyProTopUp::operators()
+    \Chargily\ChargilyProLaravel\Facades\ChargilyProTopUp::operators()
 ```
 * Retrieve Operator
 ```php
-    ChargilyProTopUp::getOperator("Djezzy");
+    \Chargily\ChargilyProLaravel\Facades\ChargilyProTopUp::getOperator("Djezzy");
 ```
 * Create new topup request
 ```php
@@ -58,16 +58,16 @@ CHARGILY_PRO_SECRET_KEY="your-secret-key"
     /**
      * Request via operator name,mode name and mode value 
      */
-    ChargilyProTopUp::request("DZ", "0790000000", "Djezzy", "DJEZZY ZID 50", "50");
+    \Chargily\ChargilyProLaravel\Facades\ChargilyProTopUp::request("DZ", "0790000000", "Djezzy", "DJEZZY ZID 50", "50");
     /**
      * Also you can request via mode id only
      */
-    ChargilyProTopUp::requestById("DZ", "0790000000", "203");
+    \Chargily\ChargilyProLaravel\Facades\ChargilyProTopUp::requestById("DZ", "0790000000", "203");
     //
 ```
 * Retrieve TopUp request details
 ```php
-    ChargilyProTopUp::getRequest("5");
+    \Chargily\ChargilyProLaravel\Facades\ChargilyProTopUp::getRequest("5");
 ```
 
 
@@ -75,11 +75,11 @@ CHARGILY_PRO_SECRET_KEY="your-secret-key"
 
 * Get Availlable vouchers list
 ```php
-    ChargilyProVoucher::all();
+    \Chargily\ChargilyProLaravel\Facades\ChargilyProVoucher::all();
 ```
 * Retrieve Voucher details
 ```php
-    ChargilyProVoucher::get("2");
+    \Chargily\ChargilyProLaravel\Facades\ChargilyProVoucher::get("2");
 ```
 * Create new voucher request
 ```php
@@ -92,14 +92,14 @@ CHARGILY_PRO_SECRET_KEY="your-secret-key"
     /**
      * Request via voucher name and value 
      */
-    ChargilyProVoucher::request("Mobilis", "100 DA");
+    \Chargily\ChargilyProLaravel\Facades\ChargilyProVoucher::request("Mobilis", "100 DA");
     /**
      * Also you can request via voucher id
      */
-    ChargilyProVoucher::requestById("2");
+    \Chargily\ChargilyProLaravel\Facades\ChargilyProVoucher::requestById("2");
     //
 ```
 * Get Sold vouchers
 ```php
-    ChargilyProVoucher::sold();
+    \Chargily\ChargilyProLaravel\Facades\ChargilyProVoucher::sold();
 ```
