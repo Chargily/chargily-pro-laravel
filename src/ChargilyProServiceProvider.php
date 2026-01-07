@@ -59,24 +59,5 @@ class ChargilyProServiceProvider extends ServiceProvider
         $this->publishes([
             __DIR__ . '/config/chargily-pro.php' => config_path('chargily-pro.php'),
         ], "chargily-pro-config");
-
-
-
-
-
-        /**
-        // Publish config
-        $this->publishes([
-            __DIR__ . '/config/hello-package.php' => config_path('hello-package.php'),
-        ], 'hello-package-config');
-
-        // Register commands
-        if ($this->app->runningInConsole()) {
-            $this->commands([
-                HelloCommand::class,
-            ]);
-        }
-
-         */
     }
 }
