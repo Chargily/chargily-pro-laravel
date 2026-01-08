@@ -4,6 +4,7 @@ namespace Chargily\ChargilyProLaravel;
 
 use Chargily\ChargilyProLaravel\Http\Middlewares\ValidateWebhookMiddleware;
 use Chargily\ChargilyProLaravel\Services\ChargilyProTopUpService;
+use Chargily\ChargilyProLaravel\Services\ChargilyProUserService;
 use Chargily\ChargilyProLaravel\Services\ChargilyProVoucherService;
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Routing\Router;
@@ -47,12 +48,9 @@ class ChargilyProServiceProvider extends ServiceProvider
         /// ================
         /// Bind services ==
         /// ================
-        $this->app->singleton('chargily-pro-voucher-service', function () {
-            return new ChargilyProVoucherService();
-        });
-        $this->app->singleton('chargily-pro-topup-service', function () {
-            return new ChargilyProTopUpService();
-        });
+        $this->app->singleton('chargily-pro-user-service', fn() => new ChargilyProUserService());
+        $this->app->singleton('chargily-pro-voucher-service', fn() => new ChargilyProVoucherService());
+        $this->app->singleton('chargily-pro-topup-service', fn() => new ChargilyProTopUpService());
         /// ==========
         /// Publish ==
         /// ==========
