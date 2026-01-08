@@ -29,7 +29,13 @@ CHARGILY_PRO_SECRET_KEY="your-secret-key"
 ```
 # Usage
 
-1. TopUps
+1. User
+* Retrieve user balance 
+```php
+    \Chargily\ChargilyProLaravel\Facades\ChargilyProUser::balance()
+```
+
+2. TopUps
 
 * Modes List
 ```php
@@ -70,8 +76,7 @@ CHARGILY_PRO_SECRET_KEY="your-secret-key"
     \Chargily\ChargilyProLaravel\Facades\ChargilyProTopUp::getRequest("5");
 ```
 
-
-2. Voucher & Gift cards
+3. Voucher & Gift cards
 
 * Get Availlable vouchers list
 ```php
