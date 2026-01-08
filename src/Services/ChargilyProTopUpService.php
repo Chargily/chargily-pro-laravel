@@ -9,7 +9,6 @@ use Chargily\ChargilyPro\Elements\ModeElement;
 use Chargily\ChargilyProLaravel\Enums\ChargilyProTopupStatusEnum;
 use Chargily\ChargilyProLaravel\Exceptions\InsufficientBalanceException;
 use Chargily\ChargilyProLaravel\Exceptions\ModeNotFoundException;
-use Chargily\ChargilyProLaravel\Models\ChargilyProTopup;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\URL;
@@ -142,7 +141,7 @@ class ChargilyProTopUpService
                         'country_code' => $item->country_code,
                         'phone_number' => $item->phone_number,
 
-                        'webhook_url' => URL::route("chargily-pro.api.topup-webhook"),
+                        'webhook_url' => URL::route(\config("chargily-pro.routes.topup-webhook")),
                         'created_at' => $item->created_at,
                     ]);
                     if ($status) {

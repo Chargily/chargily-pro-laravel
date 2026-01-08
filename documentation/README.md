@@ -10,11 +10,16 @@
 ```bash
 composer require chargily/chargily-pro-laravel
 ```
-* The Service Provider will automatically be registered; however, if you wish to manually register it, you can manually add the `Chargily\ChargilyProLaravel\ChargilyProServiceProvider::class` service provider to the array in bootstrap/providers.php (config/app.php in Laravel 10 or older).
+1. The Service Provider will automatically be registered. Also you can add service manually add the `Chargily\ChargilyProLaravel\ChargilyProServiceProvider::class` to `bootstrap/providers.php`
 
-* You should publish the config/chargily-pro.php config file with:
+2. You should publish the config file with :
 ```bash
 php artisan vendor:publish --provider="Chargily\ChargilyProLaravel\ChargilyProServiceProvider::class"
+```
+
+3. You must run migrations via the following command :
+```bash
+php artisan migrate
 ```
 
 # Configuration
@@ -27,6 +32,7 @@ CHARGILY_PRO_NAME="username"
 CHARGILY_PRO_PUBLIC_KEY="your-public-key"
 CHARGILY_PRO_SECRET_KEY="your-secret-key"
 ```
+
 # Usage
 
 1. User
@@ -108,3 +114,8 @@ CHARGILY_PRO_SECRET_KEY="your-secret-key"
 ```php
     \Chargily\ChargilyProLaravel\Facades\ChargilyProVoucher::sold();
 ```
+# Webhooks
+- Webhooks are automatically handled through the `chargily-pro.api.topup-webhook` named route.
+
+# Middlewares
+- Custom webhook routes can be secured with the `\Chargily\ChargilyProLaravel\Http\Middlewares\ValidateWebhookMiddleware` middleware.

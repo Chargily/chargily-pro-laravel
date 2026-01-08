@@ -41,5 +41,16 @@ return [
          * Vouchers model
          */
         "vouchers" => ChargilyProVoucherModel::class,
-    ]
+    ],
+    /**
+     * ===============
+     *  Routes       =
+     * ===============
+     */
+    "routes" => [
+        /**
+         * TopUps webhook route name.
+         */
+        "topup-webhook" => "chargily-pro.api.topup-webhook",
+    ],
 ];
