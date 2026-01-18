@@ -21,8 +21,6 @@ class WebhookController extends Controller
      */
     public function handle()
     {
-        $message = null;
-
         DB::beginTransaction();
         try {
             $chargily = new ChargilyPro(new Credentials(config("chargily-pro.credentials")));
